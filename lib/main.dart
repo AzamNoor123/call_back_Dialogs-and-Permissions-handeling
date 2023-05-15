@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_5_callbacks_dialogs/Views/Home.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_5_callbacks_dialogs/helper/string_resources.dart';
-import 'BLOC/URL_Lancher/bloc/url_lancher_bloc.dart';
+import 'URL_Lancher/bloc/url_lancher_bloc.dart';
 
 void main() {
   runApp(const MyApp());

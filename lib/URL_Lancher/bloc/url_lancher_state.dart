@@ -16,3 +16,5 @@ class LoadedMapState extends UrlLancherState {}
 class SettingPermissionGranted extends UrlLancherState {}
 
 class SettingPermissionNotGranted extends UrlLancherState {}
+
+class OpenSettingState extends UrlLancherState {}

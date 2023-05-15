@@ -10,3 +10,5 @@ class UrlSmsEvent extends UrlLancherEvent {}
 class LocationEvent extends UrlLancherEvent {}
 
 class SettingPermissionEvent extends UrlLancherEvent {}
+
+class OpenSettingPermission extends UrlLancherEvent {}

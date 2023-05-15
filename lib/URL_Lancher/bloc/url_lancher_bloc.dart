@@ -27,23 +27,25 @@ class UrlLancherBloc extends Bloc<UrlLancherEvent, UrlLancherState> {
       var ststus = await Permission.storage.status;
       if (ststus.isGranted) {
         emit(SettingPermissionGranted());
-      } else {
-        emit(SettingPermissionNotGranted());
+      } else if (ststus.isDenied) {
+        Permission.storage.request();
       }
-      if (await Permission.storage.request().isGranted) {
-        SettingPermissionGranted();
-      }
+    });
+    on<OpenSettingPermission>((event, emit) {
+      openAppSettings();
     });
   }
   loadmap() async {
     final status = Permission.location.status;
+
     if (await status.isGranted) {
       final avail = await MapLauncher.installedMaps;
       avail.first.showMarker(
-          coords: Coords(31.6046, 74.3210),
+          coords: Coords(ConstResources.maplat, ConstResources.maplang),
           title: ConstResources.iqbalpark,
           description: ConstResources.lahorePark,
           zoom: ConstResources.mapzoom);
+
       MapLauncher.showDirections(
           mapType: MapType.google,
           destination: Coords(ConstResources.maplat, ConstResources.maplang));

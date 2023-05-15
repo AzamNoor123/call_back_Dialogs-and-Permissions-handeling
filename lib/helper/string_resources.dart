@@ -16,4 +16,5 @@ class StringResources {
   static String OK_BTN = 'OK';
   static String NO_BTN = 'NO';
   static String YES_BTN = 'YES';
+  static String PERMISSION_SETTING_BTN = 'Permission Settiing';
 }

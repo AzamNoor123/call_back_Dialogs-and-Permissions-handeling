@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_5_callbacks_dialogs/Views/DialogUtils.dart';
 import 'package:task_5_callbacks_dialogs/helper/common_keys.dart';
 import 'package:task_5_callbacks_dialogs/helper/string_resources.dart';
-import 'package:task_5_callbacks_dialogs/helper/widget_extension.dart';
-import '../BLOC/URL_Lancher/bloc/url_lancher_bloc.dart';
+import 'package:task_5_callbacks_dialogs/Extension_pkg/widget_extension.dart';
+import '../URL_Lancher/bloc/url_lancher_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

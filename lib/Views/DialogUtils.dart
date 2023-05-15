@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:task_5_callbacks_dialogs/BLOC/URL_Lancher/bloc/url_lancher_bloc.dart';
 import 'package:task_5_callbacks_dialogs/helper/common_keys.dart';
-
+import '../URL_Lancher/bloc/url_lancher_bloc.dart';
 import '../helper/string_resources.dart';
 
 class DialogUtils {
@@ -50,7 +49,14 @@ class DialogUtils {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text(StringResources.OK_BTN))
+              child: Text(StringResources.OK_BTN)),
+          ElevatedButton(
+              onPressed: () {
+                BlocProvider.of<UrlLancherBloc>(context)
+                    .add(OpenSettingPermission());
+                Navigator.pop(context);
+              },
+              child: Text(StringResources.PERMISSION_SETTING_BTN)),
         ],
       ),
     );
